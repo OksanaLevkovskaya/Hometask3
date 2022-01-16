@@ -4,11 +4,19 @@ using System.Linq;
 
 namespace ConsoleApp1
 {
-    public class BooksComparer: IComparer<Bookitem>
+    public class BooksComparerbyNameofBook: IComparer<Bookitem>
     {
         public int Compare(Bookitem x, Bookitem y)
         {
-           return x.datePublished.CompareTo(y.datePublished);
+           return x.nameBook.CompareTo(y.nameBook);
+        }
+    }
+
+    public class BooksComparerbyAuthor: IComparer<Bookitem>
+    {
+        public int Compare(Bookitem x, Bookitem y)
+        {
+            return x.nameAuthor.CompareTo(y.nameAuthor);
         }
     }
 
@@ -27,14 +35,24 @@ namespace ConsoleApp1
             Bookitem book7 = new Bookitem("God, Human, Animal, Machine", 1995, "Meghan O'Gieblyn");
             Bookitem book8 = new Bookitem("Atlas of the Heart", 1997, "Ayn Rand");
             Bookitem book9 = new Bookitem("Everyone's Table", 2000, "Gregory Gourdet");
-            Bookitem book10 = new Bookitem("Atlas Shrugged", 2016, "Ayn Rand");
+            Bookitem book10 = new Bookitem("Atlas Shrugged", 2016, "Les Sand");
 
 
             List<Bookitem> bookitemsList = new List<Bookitem>() { book1, book2, book3,book4,book5,book6,
                                                               book7, book8, book9,book10};
-            bookitemsList.Sort(new BooksComparer());
+
+            List<Bookitem> bookitemsList1 = new List<Bookitem>() { book1, book2, book3,book4,book5,book6,
+                                                              book7, book8, book9,book10};
+
+            bookitemsList.Sort(new BooksComparerbyNameofBook());
+            bookitemsList1.Sort(new BooksComparerbyAuthor());
+
             foreach (Bookitem bookitem in bookitemsList)
-            Console.WriteLine(bookitem.datePublished);
+            Console.WriteLine(bookitem.nameBook);
+
+            foreach (Bookitem bookitem in bookitemsList)
+            Console.WriteLine(bookitem.nameAuthor);
+
         }
 
         
