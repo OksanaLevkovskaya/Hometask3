@@ -8,6 +8,7 @@ namespace ConsoleApp1
 {
     public class Bookitem
     {
+
         public string nameBook;
         public int datePublished;
         public string nameAuthor;

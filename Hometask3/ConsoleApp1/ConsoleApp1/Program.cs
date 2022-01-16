@@ -39,19 +39,21 @@ namespace ConsoleApp1
 
 
             List<Bookitem> bookitemsList = new List<Bookitem>() { book1, book2, book3,book4,book5,book6,
-                                                              book7, book8, book9,book10};
-
+                                                                  book7, book8, book9,book10};
             List<Bookitem> bookitemsList1 = new List<Bookitem>() { book1, book2, book3,book4,book5,book6,
-                                                              book7, book8, book9,book10};
+                                                                  book7, book8, book9,book10};
+            List<Bookitem> bookitemsList2 = new List<Bookitem>() { book1, book2, book3,book4,book5,book6,
+                                                                  book7, book8, book9,book10};
 
             bookitemsList.Sort(new BooksComparerbyNameofBook());
             bookitemsList1.Sort(new BooksComparerbyAuthor());
+            
 
             foreach (Bookitem bookitem in bookitemsList)
-            Console.WriteLine(bookitem.nameBook);
+                Console.WriteLine(bookitem.nameBook);
 
-            foreach (Bookitem bookitem in bookitemsList)
-            Console.WriteLine(bookitem.nameAuthor);
+            foreach (Bookitem bookitem in bookitemsList1)
+                Console.WriteLine(bookitem.nameAuthor);
 
         }
 
