@@ -6,20 +6,20 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp1
 {
-    public class Bookitem
+    public class Bookitem : Author
     {
         string _namebook;
-        
+
         public string NameBook
-            
+
         {
             get
             {
-                if (_namebook != null)
+                if (_namebook != null && _namebook.Length < 256)
                     return _namebook;
                 else
                     throw new Exception();
-             
+
             }
             set
             {
@@ -28,31 +28,18 @@ namespace ConsoleApp1
         }
 
         public int datePublished;
+      
 
-        string _nameauthor;
-        public string NameAuthor
-        {
-            get
-            {
-                if (_nameauthor != null)
-                    return _nameauthor;
-                else
-                    throw new Exception();
-
-            }
-            set
-            {
-                _nameauthor = value;
-            }
-        }
-
-        public Bookitem(string bName, int dPublished, string aName)
+        public Bookitem (string bName, int dPublished, string fName, string lName)
         {
             NameBook = bName;
             datePublished = dPublished;
-            NameAuthor = aName;
-
+            FirstName = fName;
+            LastName = lName;
+            
         }
+
+      
         
     }
 }
