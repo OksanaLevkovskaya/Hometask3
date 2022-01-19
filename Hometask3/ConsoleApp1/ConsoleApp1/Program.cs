@@ -8,7 +8,7 @@ namespace ConsoleApp1
     {
         public int Compare(Bookitem x, Bookitem y)
         {
-           return x.nameBook.CompareTo(y.nameBook);
+           return x.NameBook.CompareTo(y.NameBook);
         }
     }
 
@@ -16,7 +16,7 @@ namespace ConsoleApp1
     {
         public int Compare(Bookitem x, Bookitem y)
         {
-            return x.nameAuthor.CompareTo(y.nameAuthor);
+            return x.NameAuthor.CompareTo(y.NameAuthor);
         }
     }
 
@@ -42,21 +42,20 @@ namespace ConsoleApp1
                                                                   book7, book8, book9,book10};
             List<Bookitem> bookitemsList1 = new List<Bookitem>() { book1, book2, book3,book4,book5,book6,
                                                                   book7, book8, book9,book10};
-            List<Bookitem> bookitemsList2 = new List<Bookitem>() { book1, book2, book3,book4,book5,book6,
-                                                                  book7, book8, book9,book10};
+          
 
             bookitemsList.Sort(new BooksComparerbyNameofBook());
             bookitemsList1.Sort(new BooksComparerbyAuthor());
             
 
             foreach (Bookitem bookitem in bookitemsList)
-                Console.WriteLine(bookitem.nameBook);
+                Console.WriteLine(bookitem.NameBook);
 
             foreach (Bookitem bookitem in bookitemsList1)
-                Console.WriteLine(bookitem.nameAuthor);
+                Console.WriteLine(bookitem.NameAuthor);
 
+            
         }
-
         
     }
 }

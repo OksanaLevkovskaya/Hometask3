@@ -8,20 +8,52 @@ namespace ConsoleApp1
 {
     public class Bookitem
     {
+        string _namebook;
+        
+        public string NameBook
+            
+        {
+            get
+            {
+                if (_namebook != null)
+                    return _namebook;
+                else
+                    throw new Exception();
+             
+            }
+            set
+            {
+                _namebook = value;
+            }
+        }
 
-        public string nameBook;
         public int datePublished;
-        public string nameAuthor;
+
+        string _nameauthor;
+        public string NameAuthor
+        {
+            get
+            {
+                if (_nameauthor != null)
+                    return _nameauthor;
+                else
+                    throw new Exception();
+
+            }
+            set
+            {
+                _nameauthor = value;
+            }
+        }
 
         public Bookitem(string bName, int dPublished, string aName)
         {
-            nameBook = bName;
+            NameBook = bName;
             datePublished = dPublished;
-            nameAuthor = aName;
+            NameAuthor = aName;
 
         }
-
-       
+        
     }
 }
 
