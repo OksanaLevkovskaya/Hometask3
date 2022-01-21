@@ -15,11 +15,10 @@ namespace ConsoleApp1
         {
             get
             {
-                if (_namebook != null && _namebook.Length < 256)
+                if (_namebook != null && _namebook.Length <= 256)
                     return _namebook;
                 else
-                    throw new Exception();
-
+                    throw new Exception("NameBook Field is invalid");
             }
             set
             {

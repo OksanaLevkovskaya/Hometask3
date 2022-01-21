@@ -13,27 +13,26 @@ namespace ConsoleApp1
         {
             get
             {
-                if (_firstname != null && _firstname.Length < 256)
+                if (_firstname != null && _firstname.Length <= 256)
                     return _firstname;
                 else
-                    throw new Exception();
-
+                    throw new Exception("FirstName Field is invalid");
             }
             set
             {
                 _firstname = value;
             }
         }
+
         string _lastname;
         public string LastName
         {
             get
             {
-                if (_lastname != null && _lastname.Length < 256)
+                if (_lastname != null && _lastname.Length <= 256)
                     return _lastname;
                 else
-                    throw new Exception();
-
+                    throw new Exception("LastName Field is invalid");
             }
             set
             {
@@ -42,5 +41,4 @@ namespace ConsoleApp1
         }
 
     }
-
 }

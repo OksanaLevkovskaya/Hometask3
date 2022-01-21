@@ -26,8 +26,8 @@ namespace ConsoleApp1
         public static void Main(string[] args)
         {
 
-            Bookitem book1 = new Bookitem( "White Fang", 1906, "Jack", "London");
-            Bookitem book2 = new Bookitem("Gone With The Wind", 1936, "Margaret", "Mitchell");
+            Bookitem book1 = new Bookitem( "WhiteFang", 1906, "Jack", "London");
+            Bookitem book2 = new Bookitem("GoneWithTheWind", 1936, "Margaret", "Mitchell");
             Bookitem book3 = new Bookitem("Paradise", 1995, "Abdulrazak", "Gurnah");
             Bookitem book4 = new Bookitem("All About Me!", 2021, "Mel", "Brooks");
             Bookitem book5 = new Bookitem("Fuzz", 2021, "Mary", "Roach");
@@ -42,9 +42,10 @@ namespace ConsoleApp1
                                                                   book7, book8, book9,book10};
 
 
-            /*bookitemsList.Sort(new BooksComparerbyNameofBook());*/
+            var bookitemsbefore1991 = bookitemsList.Where(x => x.datePublished < 1991).ToList();
+            bookitemsList.Sort(new BooksComparerbyNameofBook());
             bookitemsList.Sort(new BooksComparerbyAuthor());
-            /*var bookitemsbefore1991 = bookitemsList.Where(x => x.datePublished < 1991).ToList(); */
+           
 
             foreach (Bookitem bookitem in bookitemsList)
                 Console.WriteLine(bookitem.LastName);
