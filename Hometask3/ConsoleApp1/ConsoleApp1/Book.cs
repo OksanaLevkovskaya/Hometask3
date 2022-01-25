@@ -15,19 +15,19 @@ namespace ConsoleApp1
         {
             get
             {
-                if (_namebook != null && _namebook.Length <= 256)
-                    return _namebook;
-                else
-                    throw new Exception("NameBook Field is invalid");
+                return _namebook;
             }
             set
             {
-                _namebook = value;
+                if (value != null && value.Length <= 256)
+                    _namebook = value;
+                else
+                    throw new Exception("BookName Field is invalid");
             }
         }
 
         public int datePublished;
-      
+
 
         public Bookitem (string bName, int dPublished, string fName, string lName)
         {

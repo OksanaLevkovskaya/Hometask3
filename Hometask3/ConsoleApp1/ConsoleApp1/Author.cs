@@ -13,14 +13,14 @@ namespace ConsoleApp1
         {
             get
             {
-                if (_firstname != null && _firstname.Length <= 256)
-                    return _firstname;
-                else
-                    throw new Exception("FirstName Field is invalid");
+                return _firstname;
             }
             set
             {
-                _firstname = value;
+                if (value != null && value.Length <= 256)
+                    _firstname = value;
+                else
+                    throw new Exception("FirstName Field is invalid");
             }
         }
 
@@ -29,14 +29,14 @@ namespace ConsoleApp1
         {
             get
             {
-                if (_lastname != null && _lastname.Length <= 256)
-                    return _lastname;
-                else
-                    throw new Exception("LastName Field is invalid");
+                return _lastname;
             }
             set
             {
-                _lastname = value;
+                if (value != null && value.Length <= 256)
+                    _lastname = value;
+                else
+                    throw new Exception("LastName Field is invalid");
             }
         }
 
