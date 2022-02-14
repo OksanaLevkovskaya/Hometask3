@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31919.166
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SeleniumFinalTask", "SeleniumFinalTask\SeleniumFinalTask.csproj", "{53FF8C8B-214F-47C6-B18C-3349CFB04979}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MailRuTests", "MailRuTests\MailRuTests.csproj", "{3B84FA73-2B26-43DC-9AD3-164F25B5BDEA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{53FF8C8B-214F-47C6-B18C-3349CFB04979}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{53FF8C8B-214F-47C6-B18C-3349CFB04979}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{53FF8C8B-214F-47C6-B18C-3349CFB04979}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{53FF8C8B-214F-47C6-B18C-3349CFB04979}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3B84FA73-2B26-43DC-9AD3-164F25B5BDEA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3B84FA73-2B26-43DC-9AD3-164F25B5BDEA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3B84FA73-2B26-43DC-9AD3-164F25B5BDEA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3B84FA73-2B26-43DC-9AD3-164F25B5BDEA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2717E1F0-305B-43FB-B690-B189B9C81A76}
+	EndGlobalSection
+EndGlobal
